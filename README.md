@@ -7,19 +7,19 @@ Normalization :-
 throughout the Network which in turn prevent it from Exploding to a very Big Number. It is done by subtracting Mean from the Input Data and dividing it by standard
 Deviation.
   
-Types of Normalization used in for Training the Model
 
-1. Layer Normalization :- 
-    In Layer Normalization we normalize the Input Data across Layers i.e all the channels present in the Single Input Data is Normalized. So, if the Input Data to the 
-Model has 64 Images in Batch then Mean and Standard Deviation for all the Channels present in that Particular Image is Calculated and Normalized. The Process will be 
-Repeated for all the Images in the Batch. Hence, the Number ofMean and Standard Deviation will be equal to the Number of Images present in that Particular Batch. 
 
-2. Group Normalization :- 
-    Group Normalization is bit similar to Layer Normalization. Here, the Input Data is Normalized across channels divided into Groups. Hence in short Group Normalization
-is Layer Normalization applied to the Input Data in Groups.
 
-3. Batch Normalization :- 
-    Batch Normalization refers to the Process of Normalzing the Inputs of a Particular channel across all the Input Data present in the batch. For Example, If we have 64 Images with 12 channels for the Particular Layer then we calculate Mean and Standard Deviation for Each Channel across all the Images and Normalize it. 
+
+
+
+
+
+
+
+
+
+
     
 I have named the Three Models that i have trained as Model 1, Model 2 and Model 3. For Model 1, I have used Layer Normalization and for Model 2, I have used
 Group Normalization and Batch Normalization along with L1 Regularization has been used for Model 3. From the Results, I have Inferred that Batch Normalization fared better than the other two models followed by Group Normalization and Layer Normalization. For Computer Vision Application, Batch Normalization seems to suit better as we are Normalizing across channels, Similar Features are getting Normalized together. For Natural Language Processing Application, Layer Normalization fares better as sequence of Input Data matters in NLP Application. Hence we need to Normalize all the Channels together for the Input Data. 
